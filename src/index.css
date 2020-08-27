@@ -17,39 +17,80 @@ code {
 h1 {
   font-family: "Cinzel", serif;
   color: var(--main-text-color);
-  font-size: 2.2rem !important;
+  font-size: 2rem !important;
+}
+h2 {
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem !important;
 }
 h4 {
   font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   color: var(--main-text-color);
   font-size: 0.8rem !important;
+}
+h5 {
+  font-size: 0.75rem !important;
+  color: var(--main-text-color);
+  text-align: left;
+  padding: 0 5px;
+  font-weight: 200 !important;
 }
 .sspButton {
   border: 1px solid var(--main-text-color);
   text-align: center;
+  height: 1rem;
+  cursor: pointer;
+  opacity: 1;
 }
+
 .sspButton:hover {
-  background-color: rgba(173, 216, 230, 0.308);
+  opacity: 0.8;
 }
-.sspActive {
-  background-color: rgba(255, 255, 0, 0.226);
+
+#sspButton_0 {
+  border: 1px solid gray;
 }
+#sspButton_0.sspActive {
+  background-color: gray;
+}
+
 #sspButton_1 {
-  border: 2px solid yellow;
+  border: 1px solid #4a8422;
+}
+#sspButton_1.sspActive {
+  background-color: #4a8422;
 }
 
 #sspButton_2 {
-  border: 2px solid blue;
+  border: 1px solid #2f6da4;
+}
+#sspButton_2.sspActive {
+  background-color: #2f6da4;
 }
 
 #sspButton_3 {
-  border: 2px solid pink;
+  border: 1px solid #c55a11;
+}
+#sspButton_3.sspActive {
+  background-color: #c55a11;
 }
 
 #sspButton_4 {
-  border: 2px solid green;
+  border: 1px solid #d29500;
+}
+#sspButton_4.sspActive {
+  background-color: #d29500;
 }
 
 #sspButton_5 {
-  border: 2px solid red;
+  border: 1px solid #66547f;
+}
+#sspButton_5.sspActive,
+#sspButton_5:hover {
+  background-color: #66547f;
+}
+
+#infotext {
+  color: var(--main-text-color);
 }
