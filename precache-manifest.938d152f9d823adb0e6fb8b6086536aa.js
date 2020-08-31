@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8831349893eba8138ad540a41d5b415b",
+    "revision": "67ace46f0961c9f39d6478a74217e381",
     "url": "/foodViz/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodViz/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "c67430a977201170834f",
+    "revision": "b05ed05c223bbdfbe5ba",
     "url": "/foodViz/static/css/main.d0c55bd2.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodViz/static/js/2.b3e736d1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c67430a977201170834f",
-    "url": "/foodViz/static/js/main.5e59c5df.chunk.js"
+    "revision": "b05ed05c223bbdfbe5ba",
+    "url": "/foodViz/static/js/main.c93062be.chunk.js"
   },
   {
     "revision": "64641653d95d94bf9d04",
