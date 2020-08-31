@@ -22,15 +22,54 @@ class App extends React.Component {
         { name: 5, active: false, fullname: "Fossil-Fueled Development" },
       ],
       infoText: [
+        { title: "All Countries", text: "Select a category for more information" },
+        { title: "Greatest concern", text: "Select a category for more information" },
         {
           title: "Most vulnerable",
           text:
             "Low yields and increasing population: food demand consistently outweighs food supply.",
         },
-        { title: "hej", text: "test" },
-        { title: "hej", text: "test" },
-        { title: "hej", text: "test" },
-        { title: "hej", text: "test" },
+        {
+          title: "Newly vulnerable",
+          text:
+            "Large population growth or an initial low sufficiency, combined with a decline in sufficiency leads these countries to become more vulnerable.",
+        },
+        {
+          title: "Currently trade driven",
+          text: "Select a category for more information",
+        },
+        {
+          title: "Exporters",
+          text:
+            "World food exporters’ caloric sufficiencies are declining while more countries are depending on them.",
+        },
+        {
+          title: "Importers",
+          text:
+            "These countries depend on exporters. Importers’ sufficiencies are low to begin with and decrease or remain low.",
+        },
+        { title: "Mild concern", text: "Select a category for more information" },
+        {
+          title: "Vulnerable but improving",
+          text:
+            "Few countries with low sufficiency are improving, thanks to cropland and/or productivity increase while population stagnates",
+        },
+        {
+          title: "Decreasing but not as vulnerable",
+          text:
+            "Many (mostly European) countries with higher income and food security see their caloric sufficiency decrease. More concerning, a few countries in Africa and SE Asia have declining sufficiencies, though it is variable across scenarios.",
+        },
+        {
+          title: "Highly variable",
+          text:
+            "High variability across scenarios suggest sensitivity to their differences (but finer modeling would be required to draw policy-relevant insights).",
+        },
+        { title: "Improving", text: "Select a category for more information" },
+        {
+          title: "Increasing sufficiency",
+          text:
+            "Cropland projected to increase, leading to caloric sufficiency increase. However, scenarios’ cropland expansion assumptions may be debatable and these results do not account for water scarcity.",
+        },
       ],
       categorySelected: 0,
     };
@@ -42,8 +81,47 @@ class App extends React.Component {
     this.setState({ buttons });
   };
 
-  updateSelectCategory = (id) => {
-    this.setState({ categorySelected: id });
+  updateSelectCategory = (name) => {
+    switch (name) {
+      case "Greatest concern":
+        this.setState({ categorySelected: 1 });
+        break;
+      case "Most vulnerable":
+        this.setState({ categorySelected: 2 });
+        break;
+      case "Newly vulnerable":
+        this.setState({ categorySelected: 3 });
+        break;
+      case "Currently trade driven":
+        this.setState({ categorySelected: 4 });
+        break;
+      case "Exporters":
+        this.setState({ categorySelected: 5 });
+        break;
+      case "Importers":
+        this.setState({ categorySelected: 6 });
+        break;
+      case "Mild concern":
+        this.setState({ categorySelected: 7 });
+        break;
+      case "Vulnerable but improving":
+        this.setState({ categorySelected: 8 });
+        break;
+      case "Decreasing but not as vulnerable":
+        this.setState({ categorySelected: 9 });
+        break;
+      case "Highly variable":
+        this.setState({ categorySelected: 10 });
+        break;
+      case "Improving":
+        this.setState({ categorySelected: 11 });
+        break;
+      case "Increasing sufficiency":
+        this.setState({ categorySelected: 12 });
+        break;
+      default:
+        this.setState({ categorySelected: 0 });
+    }
   };
 
   render() {

@@ -1,6 +1,6 @@
 import React from "react";
 import * as d3 from "d3";
-import root from "../countryCategories.json";
+import root from "../fullData.json";
 import "../style/sunburst.css";
 
 class SuperChart extends React.Component {
@@ -24,7 +24,7 @@ class SuperChart extends React.Component {
     return <div className="superChart" style={{ display: "inline-flex" }}></div>;
   }
   createChart = (sunburstData, id) => {
-    let radius = 190;
+    let radius = 180;
     let arcRadius = 30;
     const cfg = {
       w: 520, //Width of the circle
@@ -32,9 +32,9 @@ class SuperChart extends React.Component {
       radius: radius,
       margin: { top: 20, right: 20, bottom: 20, left: 20 }, //The margins of the SVG
       levels: 3, //How many levels or inner circles should there be drawn
-      maxValue: 7, //What is the value that the biggest circle will represent
+      maxValue: 10, //What is the value that the biggest circle will represent
       labelFactor: 1.25, //How much farther than the radius of the outer circle should the labels be placed
-      wrapWidth: 60, //The number of pixels after which a label needs to be given a new line
+      wrapWidth: 30, //The number of pixels after which a label needs to be given a new line
       opacityArea: 0.15, //The opacity of the area of the blob
       dotRadius: 2, //The size of the colored circles of each blog
       opacityCircles: 0.1, //The opacity of the circles of each blob
@@ -287,6 +287,7 @@ class SuperChart extends React.Component {
 
     function clicked(p, props) {
       parent.datum(p.parent || root);
+      props.updateState(p.data.name);
       root.each((d) => {
         d.target = {
           x0: Math.max(0, Math.min(1, (d.x0 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,
@@ -429,7 +430,7 @@ class SuperChart extends React.Component {
     }
 
     function labelVisible(d) {
-      return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.03;
+      return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.2;
     }
 
     function labelTransform(d) {
