@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 function Footer() {
   return (
     <footer>
-      <Container fluid={true} className={"position-absolute fixed-bottom"}>
+      <Container fluid={true} className={"fixed-top position-absolute"}>
         <Row
           className="p-0 bg-nav"
           style={{ height: "3vh", paddingRight: " 0.5vh 1rem" }}>

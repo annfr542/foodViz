@@ -10,7 +10,8 @@ class SspButton extends React.Component {
       <Col>
         <Row className="d-flex justify-content-center">
           <Col
-            md={2}
+            md={4}
+            lg={2}
             onClick={() => this.props.updateButton(this.props.name)}
             className={this.props.active ? "p-1  sspButton sspActive" : "p-1  sspButton"}
             id={"sspButton_" + this.props.name}></Col>

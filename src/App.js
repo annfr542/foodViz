@@ -126,14 +126,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container className="p-0 h-100" fluid={true}>
+      <Container className="p-0 " fluid={true}>
         <Row className="p-0 m-0">
-          <Col md={3}>
+          <Col md={3} sm={12}>
             <LeftInfo />
           </Col>
-          <Col md={9} className="p-0 m-0">
-            <Row className="p-2 m-0">
-              <Col md={8} className="p-0 m-0" style={{ textAlign: "center" }}>
+          <Col md={9} sm={12} className="p-0 m-0">
+            <Row className="p-0 m-0">
+              <Col md={8} sm={12} className="p-0 m-0" style={{ textAlign: "center" }}>
                 <SuperChart
                   buttons={this.state.buttons}
                   updateState={this.updateSelectCategory}
@@ -145,7 +145,7 @@ class App extends React.Component {
                   {this.makeButtons()}
                 </Row>
               </Col>
-              <Col md={4} className="m-0 p-0 d-flex align-items-center">
+              <Col md={4} sm={12} className="m-0 p-0 d-flex align-items-center">
                 <InfoText item={this.state.infoText[this.state.categorySelected]} />
               </Col>
             </Row>

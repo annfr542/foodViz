@@ -21,16 +21,22 @@ class SuperChart extends React.Component {
   }
 
   render() {
-    return <div className="superChart" style={{ display: "inline-flex" }}></div>;
+    return (
+      <div
+        id="superChart"
+        className="superChart"
+        style={{ display: "inline-flex", width: "95%", margin: "auto" }}></div>
+    );
   }
   createChart = (sunburstData, id) => {
-    let radius = 180;
-    let arcRadius = 30;
+    let width = Math.min(document.getElementById("superChart").offsetWidth, 570);
+    let radius = width / 3.4;
+    let arcRadius = width / 20;
     const cfg = {
-      w: 520, //Width of the circle
-      h: 520, //Height of the circle
+      w: width, //Width of the circle
+      h: width, //Height of the circle
       radius: radius,
-      margin: { top: 20, right: 20, bottom: 20, left: 20 }, //The margins of the SVG
+      margin: { top: 0, right: 0, bottom: 0, left: 0 }, //The margins of the SVG
       levels: 3, //How many levels or inner circles should there be drawn
       maxValue: 10, //What is the value that the biggest circle will represent
       labelFactor: 1.25, //How much farther than the radius of the outer circle should the labels be placed
@@ -94,6 +100,7 @@ class SuperChart extends React.Component {
     const rScale = d3.scaleLinear().range([0, radius]).domain([0, maxValue]);
 
     const svgParent = d3.select(id);
+
     svgParent.select("svg").remove();
 
     //Initiate the radar chart SVG
@@ -231,11 +238,10 @@ class SuperChart extends React.Component {
       .enter()
       .append("text")
       .attr("class", "axisLabelMain")
-      .attr("x", 80)
+      .attr("x", arcRadius)
       .attr("y", -5)
       .attr("dy", "0.4em")
       .attr("transform", "rotate(-93)")
-      .style("font-size", "15px")
       .attr("fill", "white")
       .text((d) => d);
 
