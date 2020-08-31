@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/foodViz/static/css/main.b49b6402.chunk.css",
-    "main.js": "/foodViz/static/js/main.c93062be.chunk.js",
-    "main.js.map": "/foodViz/static/js/main.c93062be.chunk.js.map",
+    "main.js": "/foodViz/static/js/main.7a23eb3b.chunk.js",
+    "main.js.map": "/foodViz/static/js/main.7a23eb3b.chunk.js.map",
     "runtime-main.js": "/foodViz/static/js/runtime-main.e6c9aaad.js",
     "runtime-main.js.map": "/foodViz/static/js/runtime-main.e6c9aaad.js.map",
     "static/css/2.11829350.chunk.css": "/foodViz/static/css/2.11829350.chunk.css",
     "static/js/2.b3e736d1.chunk.js": "/foodViz/static/js/2.b3e736d1.chunk.js",
     "static/js/2.b3e736d1.chunk.js.map": "/foodViz/static/js/2.b3e736d1.chunk.js.map",
     "index.html": "/foodViz/index.html",
-    "precache-manifest.f1f654e3c52c79fc7c414efb76c3bd2c.js": "/foodViz/precache-manifest.f1f654e3c52c79fc7c414efb76c3bd2c.js",
+    "precache-manifest.1bf4d7385706df0294d675b6c6ab47c2.js": "/foodViz/precache-manifest.1bf4d7385706df0294d675b6c6ab47c2.js",
     "service-worker.js": "/foodViz/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/foodViz/static/css/2.11829350.chunk.css.map",
     "static/css/main.b49b6402.chunk.css.map": "/foodViz/static/css/main.b49b6402.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.11829350.chunk.css",
     "static/js/2.b3e736d1.chunk.js",
     "static/css/main.b49b6402.chunk.css",
-    "static/js/main.c93062be.chunk.js"
+    "static/js/main.7a23eb3b.chunk.js"
   ]
 }
